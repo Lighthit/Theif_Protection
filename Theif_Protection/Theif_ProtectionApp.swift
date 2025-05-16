@@ -12,6 +12,7 @@ struct Theif_ProtectionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            GPS_module()
         }
     }
 }
