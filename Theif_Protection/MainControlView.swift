@@ -1,18 +1,25 @@
-//
-//  MainControlView.swift
-//  Theif_Protection
-//
-//  Created by poomipat Makornwattana on 16/5/2568 BE.
-//
-
 import SwiftUI
 
 struct MainControlView: View {
+    var CurLat: String
+    var CurLong: String
+    var Distance: Float
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Latitude: \(CurLat)")
+            Text("Longitude: \(CurLong)")
+            Text("Selected Distance: \(Distance, specifier: "%.1f") m")
+        }
+        .padding()
     }
 }
 
 #Preview {
-    MainControlView()
+    // ใส่ตัวอย่างค่าทดสอบให้ครบตามที่ MainControlView ต้องการ
+    MainControlView(
+        CurLat: "NaN",
+        CurLong: "Nan",
+        Distance: 0.001
+    )
 }
